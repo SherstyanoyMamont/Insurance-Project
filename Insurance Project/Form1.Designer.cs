@@ -28,30 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            buttonAddClient = new Button();
             labelFirstName = new Label();
             labelSurname = new Label();
             labelDoB = new Label();
-            checkBox1 = new CheckBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            comboBox1 = new ComboBox();
+            checkBoxDiscount = new CheckBox();
+            textBoxFirstName = new TextBox();
+            textBoxSurname = new TextBox();
+            comboBoxCarBrand = new ComboBox();
             label1 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dateTimePickerDoB = new DateTimePicker();
             labelCarModel = new Label();
-            comboBox2 = new ComboBox();
+            comboBoxCarModel = new ComboBox();
             labelDiscount = new Label();
             label2 = new Label();
             SuspendLayout();
             // 
-            // button1
+            // buttonAddClient
             // 
-            button1.Location = new Point(849, 628);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 0;
-            button1.Text = "Add Client";
-            button1.UseVisualStyleBackColor = true;
+            buttonAddClient.Location = new Point(849, 628);
+            buttonAddClient.Name = "buttonAddClient";
+            buttonAddClient.Size = new Size(112, 34);
+            buttonAddClient.TabIndex = 0;
+            buttonAddClient.Text = "Add Client";
+            buttonAddClient.UseVisualStyleBackColor = true;
+            buttonAddClient.Click += buttonAddClient_Click;
             // 
             // labelFirstName
             // 
@@ -81,37 +82,37 @@
             labelDoB.TabIndex = 3;
             labelDoB.Text = "Date of Birth";
             // 
-            // checkBox1
+            // checkBoxDiscount
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(293, 443);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(121, 29);
-            checkBox1.TabIndex = 4;
-            checkBox1.Text = "checkBox1";
-            checkBox1.UseVisualStyleBackColor = true;
+            checkBoxDiscount.AutoSize = true;
+            checkBoxDiscount.Location = new Point(293, 443);
+            checkBoxDiscount.Name = "checkBoxDiscount";
+            checkBoxDiscount.Size = new Size(78, 29);
+            checkBoxDiscount.TabIndex = 4;
+            checkBoxDiscount.Text = " 10%";
+            checkBoxDiscount.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxFirstName
             // 
-            textBox1.Location = new Point(293, 157);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(300, 31);
-            textBox1.TabIndex = 5;
+            textBoxFirstName.Location = new Point(293, 157);
+            textBoxFirstName.Name = "textBoxFirstName";
+            textBoxFirstName.Size = new Size(300, 31);
+            textBoxFirstName.TabIndex = 5;
             // 
-            // textBox2
+            // textBoxSurname
             // 
-            textBox2.Location = new Point(293, 216);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(300, 31);
-            textBox2.TabIndex = 6;
+            textBoxSurname.Location = new Point(293, 216);
+            textBoxSurname.Name = "textBoxSurname";
+            textBoxSurname.Size = new Size(300, 31);
+            textBoxSurname.TabIndex = 6;
             // 
-            // comboBox1
+            // comboBoxCarBrand
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(293, 329);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(300, 33);
-            comboBox1.TabIndex = 7;
+            comboBoxCarBrand.FormattingEnabled = true;
+            comboBoxCarBrand.Location = new Point(293, 329);
+            comboBoxCarBrand.Name = "comboBoxCarBrand";
+            comboBoxCarBrand.Size = new Size(300, 33);
+            comboBoxCarBrand.TabIndex = 7;
             // 
             // label1
             // 
@@ -122,12 +123,12 @@
             label1.TabIndex = 8;
             label1.Text = "Car Brand";
             // 
-            // dateTimePicker1
+            // dateTimePickerDoB
             // 
-            dateTimePicker1.Location = new Point(293, 277);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(300, 31);
-            dateTimePicker1.TabIndex = 10;
+            dateTimePickerDoB.Location = new Point(293, 277);
+            dateTimePickerDoB.Name = "dateTimePickerDoB";
+            dateTimePickerDoB.Size = new Size(300, 31);
+            dateTimePickerDoB.TabIndex = 10;
             // 
             // labelCarModel
             // 
@@ -138,13 +139,13 @@
             labelCarModel.TabIndex = 11;
             labelCarModel.Text = "Car Model";
             // 
-            // comboBox2
+            // comboBoxCarModel
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(293, 387);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(300, 33);
-            comboBox2.TabIndex = 12;
+            comboBoxCarModel.FormattingEnabled = true;
+            comboBoxCarModel.Location = new Point(293, 387);
+            comboBoxCarModel.Name = "comboBoxCarModel";
+            comboBoxCarModel.Size = new Size(300, 33);
+            comboBoxCarModel.TabIndex = 12;
             // 
             // labelDiscount
             // 
@@ -172,18 +173,18 @@
             ClientSize = new Size(1034, 710);
             Controls.Add(label2);
             Controls.Add(labelDiscount);
-            Controls.Add(comboBox2);
+            Controls.Add(comboBoxCarModel);
             Controls.Add(labelCarModel);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dateTimePickerDoB);
             Controls.Add(label1);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(checkBox1);
+            Controls.Add(comboBoxCarBrand);
+            Controls.Add(textBoxSurname);
+            Controls.Add(textBoxFirstName);
+            Controls.Add(checkBoxDiscount);
             Controls.Add(labelDoB);
             Controls.Add(labelSurname);
             Controls.Add(labelFirstName);
-            Controls.Add(button1);
+            Controls.Add(buttonAddClient);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -192,18 +193,18 @@
 
         #endregion
 
-        private Button button1;
+        private Button buttonAddClient;
         private Label labelFirstName;
         private Label labelSurname;
         private Label labelDoB;
-        private CheckBox checkBox1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private ComboBox comboBox1;
+        private CheckBox checkBoxDiscount;
+        private TextBox textBoxFirstName;
+        private TextBox textBoxSurname;
+        private ComboBox comboBoxCarBrand;
         private Label label1;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePickerDoB;
         private Label labelCarModel;
-        private ComboBox comboBox2;
+        private ComboBox comboBoxCarModel;
         private Label labelDiscount;
         private Label label2;
     }
