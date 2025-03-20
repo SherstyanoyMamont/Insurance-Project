@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Insurance_Project
 {
@@ -59,6 +61,30 @@ namespace Insurance_Project
 
             string json = File.ReadAllText("users.json");
             return JsonConvert.DeserializeObject<List<User>>(json);
+        }
+
+        private void buttonSkip_Click(object sender, EventArgs e)
+        {
+            string username = textBoxUsernameLogin.Text.Trim();
+            string password = textBoxPasswordLogin.Text;
+
+            List<User> users = LoadUsers();
+
+            var user = users.FirstOrDefault(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase)
+                                              && u.Password == password);
+
+            var adminPanel = new MainForm(user); // Передаём пользователя
+            adminPanel.Show();
+            this.Hide();
+
+        }
+
+        private void buttonRegister_Click(object sender, EventArgs e)
+        {
+            var registrationForm = new RegistrationForm(); // Передаём пользователя
+
+            registrationForm.Show();
+            this.Hide();
         }
     }
 }

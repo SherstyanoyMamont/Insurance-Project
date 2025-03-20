@@ -72,5 +72,25 @@ namespace Insurance_Project
             string json = JsonConvert.SerializeObject(users, Formatting.Indented);
             File.WriteAllText("users.json", json);
         }
+
+        private void buttonSkip_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSkipR_Click(object sender, EventArgs e)
+        {
+            string username = "Admin";
+            string password = textBoxPasswordReg.Text;
+
+            List<User> users = LoadUsers();
+
+            var user = users.FirstOrDefault(u => u.Username.Equals(username, StringComparison.OrdinalIgnoreCase)
+                                              && u.Password == password);
+
+            var adminPanel = new MainForm(user); // Передаём пользователя
+            adminPanel.Show();
+            this.Hide();
+        }
     }
 }
