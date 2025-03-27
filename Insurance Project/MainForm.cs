@@ -27,7 +27,7 @@ namespace Insurance_Project
 
             Client client = new(textBoxFirstName.Text, textBoxSurname.Text, dateTimePickerDoB.Value, comboBoxGender.Text, comboBoxLocation.Text, textBoxEmail.Text, maskedTextBoxPhoneNumber.Text, (int)numericUpDownDriverLicense.Value, (int)numericUpDownPenaltyPoints.Value, Cars);
 
-            Insurance insurance = new(client, comboBoxCoverage.Text);
+            Insurance insurance = new(client, comboBoxCoverage.Text, (int)numericUpDownPenaltyPoints.Value);
 
             insurance.CalculateInsuranceCost(client);
 

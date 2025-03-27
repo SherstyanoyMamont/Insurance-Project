@@ -11,11 +11,13 @@ namespace Insurance_Project
         public double FinalPrice { get; private set; }
         public string? CarBrand { get; private set; }
 
+        public int penaltyPoints { get; set; }
+
         public double BasePrice { get; private set; }
         public int Under24ageCoeficient { get; private set; }
         public Client Client { get; private set; }
 
-        public Insurance(Client client, string? coverage)
+        public Insurance(Client client, string? coverage, int penaltyPoints)
         {
             this.InsuranceCode = "1";
             this.BasePrice = 1000;
@@ -26,6 +28,7 @@ namespace Insurance_Project
             this.ClientName = client.FirstName + " " + client.LastName;
             this.ClientPhone = client.PhoneNumber;
             this.CarBrand = client.Cars[0].Brand + " " + client.Cars[0].Model;
+            this.penaltyPoints = penaltyPoints;
         }
 
 
@@ -93,7 +96,66 @@ namespace Insurance_Project
             else if (client.Cars[0].Emission == "Low") { emissionsFactor = -55; }
             double coverageFactor = Coverage == "Fully" ? 200 : -120; ;                // Meaning for middle emission
 
-            return FinalPrice = BasePrice * genderFactor + ageFactor + locationFactor + carModelFactor + emissionsFactor + coverageFactor; // Return the final price.
+            //penalty points
+            double penaltyPointsImpact = CalculatepenaltyPoints();
+
+            //Discount
+            double initialPrice = BasePrice * genderFactor + ageFactor + locationFactor + carModelFactor + emissionsFactor + coverageFactor + penaltyPointsImpact;
+            double initPrice = applyDiscount(initialPrice, client);
+
+            return FinalPrice = initPrice; // Return the final price.
+        }
+        private double applyDiscount(double initialPrice, Client client)
+        {
+            if (client.DriverLicese > 5)
+            {
+                initialPrice *= 0.95;
+            }
+            return initialPrice;
+        }
+        private double CalculatepenaltyPoints()
+        {
+            
+
+
+            if (penaltyPoints >= 6)
+            {
+                throw new InvalidOperationException("Insurance cannot be provided due to excessive penalty points.");
+            }
+
+            double points = 0;
+
+            switch (penaltyPoints)
+            {
+
+                case 1:
+
+                    points = BasePrice * 0.02;
+
+                    break;
+
+                case 2:
+
+                    points = BasePrice * 0.04;
+                    break;
+
+                case 3:
+
+                    points = BasePrice * 0.06;
+                    break;
+
+                case 4:
+
+                    points = BasePrice * 0.08;
+                    break;
+
+                case 5:
+
+                    points = BasePrice * 0.1;
+                    break;
+            }
+
+            return points;
         }
     }
 }

@@ -25,7 +25,7 @@ namespace Insurance_Project
 
 
             InitializeComponent();
-            dgvProducts.CellContentClick += dgvProducts_CellContentClick;
+            //dgvProducts.CellContentClick += dgvProducts_CellContentClick;
             Сatalog = catalog;
             Insurances = Сatalog.ListInsurance;
             //PopulateListBox();
@@ -122,6 +122,10 @@ namespace Insurance_Project
 
             dgvProducts.Columns[8].Visible = false;
 
+            dgvProducts.Columns[9].Visible = false;
+
+            
+
 
 
 
@@ -129,15 +133,16 @@ namespace Insurance_Project
 
         private void dgvProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // store index values for Modify and Delete button columns
-            const int ModifyIndex = 9;
-            const int DeleteIndex = 10;
+            const int ModifyIndex = 10;
+            const int DeleteIndex = 11;
 
-            if (e.ColumnIndex == ModifyIndex || e.ColumnIndex == DeleteIndex)
-            {
-                string productCode = dgvProducts.Rows[e.RowIndex].Cells[0].Value.ToString().Trim();
-                selectedInsurance = GetProduct(productCode);
-            }
+            if (e.RowIndex < 0 || e.RowIndex >= dgvProducts.Rows.Count)
+                return;
+
+            selectedInsurance = dgvProducts.Rows[e.RowIndex].DataBoundItem as Insurance;
+
+            if (selectedInsurance == null)
+                return;
 
             if (e.ColumnIndex == ModifyIndex)
             {
@@ -161,7 +166,7 @@ namespace Insurance_Project
 
         private void ModifyProduct(int indexOfOld)
         {
-            var oldInsurance = new Insurance(selectedInsurance.Client, selectedInsurance.Coverage)
+            var oldInsurance = new Insurance(selectedInsurance.Client, selectedInsurance.Coverage, selectedInsurance.penaltyPoints)
             {
                 InsuranceCode = selectedInsurance.InsuranceCode,
                 ClientName = selectedInsurance.ClientName,
@@ -269,6 +274,7 @@ namespace Insurance_Project
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            bool found = false;
             foreach (var o in Сatalog.ListInsurance)
             {
                 if (o.Client.FirstName == Convert.ToString(textBox1.Text))
@@ -277,12 +283,16 @@ namespace Insurance_Project
                         "\nMake auto: " + o.Client.Cars[0].Brand +
                         "\nPrise: " + o.FinalPrice + " €" +
                         "\nDate: " + o.Client.DateTimeNow);
+                    found = true;
                     break;
                 }
-                else
-                {
-                    MessageBox.Show("Record not Found");
-                }
+
+            }
+            if (!found)
+            {
+
+                MessageBox.Show("Record not Found");
+
             }
         }
 
