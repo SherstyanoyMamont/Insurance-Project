@@ -50,7 +50,7 @@ namespace Insurance_Project
                 if (AddInsurance)
                 {
                     // initialize the Product property with new Products object
-                    this.Insurance = new Insurance();
+                    //this.Insurance = new Insurance();
                 }
                 this.LoadProductData();
                 this.DialogResult = DialogResult.OK;

@@ -28,6 +28,20 @@ namespace Insurance_Project
             this.CarBrand = client.Cars[0].Brand + " " + client.Cars[0].Model;
         }
 
+        //public Insurance()
+        //{
+        //    Client client = new Client();
+        //    this.InsuranceCode = "1";
+        //    this.BasePrice = 1000;
+        //    this.Under24ageCoeficient = 30; //30%
+        //    this.Client = client;
+        //    this.Coverage = "Fully Comprehensive";
+        //    this.FinalPrice = CalculateInsuranceCost(client);
+        //    this.ClientName = client.FirstName + " " + client.LastName;
+        //    this.ClientPhone = client.PhoneNumber;
+        //    this.CarBrand = client.Cars[0].Brand + " " + client.Cars[0].Model;
+        //}
+
 
 
 

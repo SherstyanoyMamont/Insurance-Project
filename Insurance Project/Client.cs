@@ -31,5 +31,23 @@
             Age = (int)((DateTimeNow - DateOfBirth).TotalDays / 365.242199); // Calculate Age
 
         }
+
+        public Client()
+        {
+            Cars = new List<Car>();
+
+            FirstName = "";
+            LastName = "";
+            Location = "";
+            Gender = "";
+            Email = "";
+            PhoneNumber = "";
+            DateTimeNow = DateTime.Now;
+            DateOfBirth = DateTime.Now;
+            DriverLicese = 1;
+            PenaltyPoints = 0;
+            Age = 20; // Calculate Age
+
+        }
     }
 }
