@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             listBox1 = new ListBox();
-            button1 = new Button();
+            buttonFiend = new Button();
             textBox1 = new TextBox();
             label1 = new Label();
             dgvProducts = new DataGridView();
@@ -40,38 +40,39 @@
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(11, 514);
+            listBox1.ItemHeight = 25;
+            listBox1.Location = new Point(14, 642);
             listBox1.Margin = new Padding(2);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(1162, 344);
+            listBox1.Size = new Size(1452, 429);
             listBox1.TabIndex = 0;
             // 
-            // button1
+            // buttonFiend
             // 
-            button1.Location = new Point(1082, 431);
-            button1.Margin = new Padding(2);
-            button1.Name = "button1";
-            button1.Size = new Size(90, 27);
-            button1.TabIndex = 1;
-            button1.Text = "Fiend";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            buttonFiend.Location = new Point(1213, 539);
+            buttonFiend.Margin = new Padding(2);
+            buttonFiend.Name = "buttonFiend";
+            buttonFiend.Size = new Size(112, 34);
+            buttonFiend.TabIndex = 1;
+            buttonFiend.Text = "Fiend";
+            buttonFiend.UseVisualStyleBackColor = true;
+            buttonFiend.Click += button1_Click_1;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(10, 431);
+            textBox1.Location = new Point(12, 539);
             textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(668, 27);
+            textBox1.Size = new Size(834, 31);
             textBox1.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(10, 408);
+            label1.Location = new Point(12, 510);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(112, 20);
+            label1.Size = new Size(136, 25);
             label1.TabIndex = 3;
             label1.Text = "Input full name:";
             // 
@@ -79,34 +80,34 @@
             // 
             dgvProducts.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProducts.Location = new Point(11, 11);
+            dgvProducts.Location = new Point(14, 14);
             dgvProducts.Margin = new Padding(2);
             dgvProducts.Name = "dgvProducts";
             dgvProducts.RowHeadersWidth = 62;
-            dgvProducts.Size = new Size(1162, 385);
+            dgvProducts.Size = new Size(1311, 481);
             dgvProducts.TabIndex = 0;
             dgvProducts.CellContentClick += dgvProducts_CellContentClick;
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(975, 431);
-            btnAdd.Margin = new Padding(4, 5, 4, 5);
+            btnAdd.Location = new Point(1080, 539);
+            btnAdd.Margin = new Padding(5, 6, 5, 6);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(85, 27);
+            btnAdd.Size = new Size(106, 34);
             btnAdd.TabIndex = 5;
             btnAdd.Text = "&Add Product";
             btnAdd.Click += btnAdd_Click;
             // 
             // SearchForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1194, 482);
+            ClientSize = new Size(1361, 602);
             Controls.Add(btnAdd);
             Controls.Add(dgvProducts);
             Controls.Add(label1);
             Controls.Add(textBox1);
-            Controls.Add(button1);
+            Controls.Add(buttonFiend);
             Controls.Add(listBox1);
             Margin = new Padding(2);
             Name = "SearchForm";
@@ -120,7 +121,7 @@
         #endregion
 
         private ListBox listBox1;
-        private Button button1;
+        private Button buttonFiend;
         private TextBox textBox1;
         private Label label1;
         private DataGridView dgvProducts;

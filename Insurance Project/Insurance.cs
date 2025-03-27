@@ -8,7 +8,7 @@ namespace Insurance_Project
         public string ClientName { get; set; }
         public string? ClientPhone { get; set; }
         public string? Coverage { get; private set; }
-        public double FinalPrice { get; private set; }
+        public double FinalPrice { get; set; }
         public string? CarBrand { get; private set; }
 
         public double BasePrice { get; private set; }

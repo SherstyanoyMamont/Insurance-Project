@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtQuantity = new TextBox();
-            label4 = new Label();
             txtPrice = new TextBox();
-            txtDescription = new TextBox();
+            txtPhoneNumber = new TextBox();
             txtCode = new TextBox();
             btnCancel = new Button();
             btnAccept = new Button();
@@ -39,25 +37,6 @@
             label2 = new Label();
             label1 = new Label();
             SuspendLayout();
-            // 
-            // txtQuantity
-            // 
-            txtQuantity.Location = new Point(176, 254);
-            txtQuantity.Margin = new Padding(6, 7, 6, 7);
-            txtQuantity.Name = "txtQuantity";
-            txtQuantity.Size = new Size(40, 31);
-            txtQuantity.TabIndex = 42;
-            txtQuantity.Tag = "Quantity";
-            // 
-            // label4
-            // 
-            label4.Location = new Point(73, 249);
-            label4.Margin = new Padding(6, 0, 6, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(91, 43);
-            label4.TabIndex = 41;
-            label4.Text = "Quantity";
-            label4.TextAlign = ContentAlignment.MiddleRight;
             // 
             // txtPrice
             // 
@@ -68,14 +47,14 @@
             txtPrice.TabIndex = 35;
             txtPrice.Tag = "Price";
             // 
-            // txtDescription
+            // txtPhoneNumber
             // 
-            txtDescription.Location = new Point(178, 105);
-            txtDescription.Margin = new Padding(6, 7, 6, 7);
-            txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(324, 31);
-            txtDescription.TabIndex = 34;
-            txtDescription.Tag = "Description";
+            txtPhoneNumber.Location = new Point(178, 105);
+            txtPhoneNumber.Margin = new Padding(6, 7, 6, 7);
+            txtPhoneNumber.Name = "txtPhoneNumber";
+            txtPhoneNumber.Size = new Size(324, 31);
+            txtPhoneNumber.TabIndex = 34;
+            txtPhoneNumber.Tag = "Description";
             // 
             // txtCode
             // 
@@ -105,6 +84,7 @@
             btnAccept.Size = new Size(146, 43);
             btnAccept.TabIndex = 36;
             btnAccept.Text = "&Accept";
+            btnAccept.Click += btnAccept_Click;
             // 
             // label3
             // 
@@ -118,12 +98,12 @@
             // 
             // label2
             // 
-            label2.Location = new Point(53, 99);
+            label2.Location = new Point(15, 99);
             label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
-            label2.Size = new Size(111, 43);
+            label2.Size = new Size(149, 43);
             label2.TabIndex = 39;
-            label2.Text = "Description:";
+            label2.Text = "Phone Number:";
             label2.TextAlign = ContentAlignment.MiddleRight;
             // 
             // label1
@@ -141,10 +121,8 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(620, 412);
-            Controls.Add(txtQuantity);
-            Controls.Add(label4);
             Controls.Add(txtPrice);
-            Controls.Add(txtDescription);
+            Controls.Add(txtPhoneNumber);
             Controls.Add(txtCode);
             Controls.Add(btnCancel);
             Controls.Add(btnAccept);
@@ -159,11 +137,8 @@
         }
 
         #endregion
-
-        private TextBox txtQuantity;
-        private Label label4;
         private TextBox txtPrice;
-        private TextBox txtDescription;
+        private TextBox txtPhoneNumber;
         private TextBox txtCode;
         private Button btnCancel;
         private Button btnAccept;
