@@ -1,0 +1,86 @@
+{
+  "BMW": {
+    "X6": 300,
+    "Z4": 175,
+    "3 Series": 260,
+    "5 Series": 280,
+    "Convertible": 200
+  },
+  "Mercedes-Benz": {
+    "E-Class": 280,
+    "S-Class": 300,
+    "C-Class": 250
+  },
+  "Audi": {
+    "A3": 200,
+    "A4": 220,
+    "Q7": 270,
+    "TT": 250
+  },
+  "Toyota": {
+    "Yaris": 50,
+    "Auris": 50,
+    "Corolla": 50,
+    "Avensis": 50,
+    "Land Cruiser": 180
+  },
+  "Opel": {
+    "Corsa": 50,
+    "Astra": 105,
+    "Vectra": 150,
+    "Insignia": 140
+  },
+  "Volkswagen": {
+    "Golf": 120,
+    "Passat": 140,
+    "Tiguan": 160,
+    "Polo": 110
+  },
+  "Ford": {
+    "Focus": 130,
+    "Fiesta": 110,
+    "Mondeo": 140,
+    "Kuga": 150
+  },
+  "Renault": {
+    "Clio": 50,
+    "Megane": 75,
+    "Fluence": 100,
+    "Kadjar": 120
+  },
+  "Hyundai": {
+    "i30": 100,
+    "Tucson": 120,
+    "i20": 90
+  },
+  "Kia": {
+    "Ceed": 90,
+    "Sportage": 110,
+    "Rio": 80
+  },
+  "Nissan": {
+    "Qashqai": 120,
+    "Juke": 100,
+    "Micra": 80
+  },
+  "Peugeot": {
+    "208": 80,
+    "308": 100,
+    "3008": 120
+  },
+  "Mazda": {
+    "3": 110,
+    "6": 130,
+    "CX-5": 150
+  },
+  "Honda": {
+    "Civic": 120,
+    "Accord": 130,
+    "CR-V": 140
+  },
+  "Skoda": {
+    "Octavia": 100,
+    "Fabia": 90,
+    "Superb": 120
+  }
+}
