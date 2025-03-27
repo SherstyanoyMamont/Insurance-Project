@@ -56,5 +56,10 @@ namespace Insurance_Project
             SearchForm search = new SearchForm(catalog);
             search.Show();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

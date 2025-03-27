@@ -130,7 +130,7 @@ namespace Insurance_Project
             // 
             // label13
             // 
-            label13.Location = new Point(16, 538);
+            label13.Location = new Point(16, 563);
             label13.Name = "label13";
             label13.Size = new Size(771, 110);
             label13.TabIndex = 27;
@@ -141,7 +141,7 @@ namespace Insurance_Project
             label16.ForeColor = SystemColors.ControlText;
             label16.Location = new Point(16, 393);
             label16.Name = "label16";
-            label16.Size = new Size(615, 134);
+            label16.Size = new Size(615, 170);
             label16.TabIndex = 26;
             label16.Text = resources.GetString("label16.Text");
             // 
@@ -158,7 +158,7 @@ namespace Insurance_Project
             l_FinalPrice.AutoSize = true;
             l_FinalPrice.Location = new Point(357, 156);
             l_FinalPrice.Name = "l_FinalPrice";
-            l_FinalPrice.Size = new Size(61, 20);
+            l_FinalPrice.Size = new Size(73, 25);
             l_FinalPrice.TabIndex = 24;
             l_FinalPrice.Text = "<Price>";
             // 
@@ -167,7 +167,7 @@ namespace Insurance_Project
             l_ClientPhone.AutoSize = true;
             l_ClientPhone.Location = new Point(357, 130);
             l_ClientPhone.Name = "l_ClientPhone";
-            l_ClientPhone.Size = new Size(70, 20);
+            l_ClientPhone.Size = new Size(86, 25);
             l_ClientPhone.TabIndex = 23;
             l_ClientPhone.Text = "<Phone>";
             // 
@@ -175,7 +175,7 @@ namespace Insurance_Project
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
-            pictureBox1.Location = new Point(398, 708);
+            pictureBox1.Location = new Point(398, 733);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(205, 50);
             pictureBox1.TabIndex = 22;
@@ -186,7 +186,7 @@ namespace Insurance_Project
             label4.AutoSize = true;
             label4.Location = new Point(16, 22);
             label4.Name = "label4";
-            label4.Size = new Size(162, 20);
+            label4.Size = new Size(198, 25);
             label4.TabIndex = 15;
             label4.Text = "1.   Document Number\t:";
             // 
@@ -195,7 +195,7 @@ namespace Insurance_Project
             label14.AutoSize = true;
             label14.Location = new Point(16, 49);
             label14.Name = "label14";
-            label14.Size = new Size(184, 20);
+            label14.Size = new Size(221, 25);
             label14.TabIndex = 15;
             label14.Text = "2.   Description of Vehicle \t:";
             // 
@@ -204,7 +204,7 @@ namespace Insurance_Project
             label15.AutoSize = true;
             label15.Location = new Point(16, 77);
             label15.Name = "label15";
-            label15.Size = new Size(182, 20);
+            label15.Size = new Size(220, 25);
             label15.TabIndex = 15;
             label15.Text = "3.   Name of Policyholder :";
             // 
@@ -222,7 +222,7 @@ namespace Insurance_Project
             l_Vehicle.ForeColor = SystemColors.ControlText;
             l_Vehicle.Location = new Point(357, 49);
             l_Vehicle.Name = "l_Vehicle";
-            l_Vehicle.Size = new Size(76, 20);
+            l_Vehicle.Size = new Size(90, 25);
             l_Vehicle.TabIndex = 1;
             l_Vehicle.Text = "<Vehicle>";
             // 
@@ -232,7 +232,7 @@ namespace Insurance_Project
             l_DocNumber.ForeColor = SystemColors.ControlText;
             l_DocNumber.Location = new Point(357, 22);
             l_DocNumber.Name = "l_DocNumber";
-            l_DocNumber.Size = new Size(118, 20);
+            l_DocNumber.Size = new Size(144, 25);
             l_DocNumber.TabIndex = 1;
             l_DocNumber.Text = "<DOC Number>";
             // 
@@ -245,7 +245,7 @@ namespace Insurance_Project
             // 
             // label10
             // 
-            label10.Location = new Point(398, 768);
+            label10.Location = new Point(398, 793);
             label10.Name = "label10";
             label10.Size = new Size(111, 20);
             label10.TabIndex = 21;
@@ -257,7 +257,7 @@ namespace Insurance_Project
             l_ClientName.ForeColor = SystemColors.ControlText;
             l_ClientName.Location = new Point(357, 77);
             l_ClientName.Name = "l_ClientName";
-            l_ClientName.Size = new Size(107, 20);
+            l_ClientName.Size = new Size(127, 25);
             l_ClientName.TabIndex = 1;
             l_ClientName.Text = "<ClientName>";
             // 
@@ -267,13 +267,13 @@ namespace Insurance_Project
             l_StartDate.ForeColor = SystemColors.ControlText;
             l_StartDate.Location = new Point(357, 104);
             l_StartDate.Name = "l_StartDate";
-            l_StartDate.Size = new Size(92, 20);
+            l_StartDate.Size = new Size(109, 25);
             l_StartDate.TabIndex = 1;
             l_StartDate.Text = "<StartDate>";
             // 
             // label9
             // 
-            label9.Location = new Point(16, 668);
+            label9.Location = new Point(16, 693);
             label9.Name = "label9";
             label9.Size = new Size(296, 90);
             label9.TabIndex = 21;
@@ -335,7 +335,7 @@ namespace Insurance_Project
             label2.Font = new Font("Segoe UI", 16F);
             label2.Location = new Point(28, 33);
             label2.Name = "label2";
-            label2.Size = new Size(337, 37);
+            label2.Size = new Size(407, 45);
             label2.TabIndex = 14;
             label2.Text = "Certificate Motor Insurance";
             // 

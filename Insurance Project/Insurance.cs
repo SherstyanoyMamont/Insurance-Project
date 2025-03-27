@@ -4,20 +4,32 @@ namespace Insurance_Project
 {
     public class Insurance : BaseEntity
     {
-        public double FinalPrice { get; private set; }
-        public double BasePrice { get; private set; }
+        public string InsuranceCode { get; set; }
+        public string ClientName { get; set; }
+        public string? ClientPhone { get; set; }
         public string? Coverage { get; private set; }
+        public double FinalPrice { get; private set; }
+        public string? CarBrand { get; private set; }
+
+        public double BasePrice { get; private set; }
         public int Under24ageCoeficient { get; private set; }
         public Client Client { get; private set; }
 
         public Insurance(Client client, string? coverage)
         {
+            this.InsuranceCode = "1";
             this.BasePrice = 1000;
             this.Under24ageCoeficient = 30; //30%
             this.Client = client;
             this.Coverage = coverage;
-            FinalPrice = CalculateInsuranceCost(client);
+            this.FinalPrice = CalculateInsuranceCost(client);
+            this.ClientName = client.FirstName + " " + client.LastName;
+            this.ClientPhone = client.PhoneNumber;
+            this.CarBrand = client.Cars[0].Brand + " " + client.Cars[0].Model;
         }
+
+
+
 
         //public Insurance() { }
 

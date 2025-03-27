@@ -92,5 +92,10 @@ namespace Insurance_Project
             adminPanel.Show();
             this.Hide();
         }
+
+        private void RegistrationForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

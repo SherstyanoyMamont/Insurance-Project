@@ -170,6 +170,7 @@
             Margin = new Padding(4);
             Name = "RegistrationForm";
             Text = "Login";
+            Load += RegistrationForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
