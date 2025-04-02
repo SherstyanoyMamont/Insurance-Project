@@ -52,6 +52,7 @@ namespace Insurance_Project
             Insurance.ClientPhone = txtClientPhone.Text.Trim();
 
             this.DialogResult = DialogResult.OK;
+           
             this.Close();
         }
 

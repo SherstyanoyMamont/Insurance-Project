@@ -51,8 +51,8 @@ namespace Insurance_Project
 
             dgvProducts.Columns.Clear();
             dgvProducts.DataSource = new BindingList<Insurance>(this.Insurances.ToList());
+           
 
-            
 
             // add column for modify button
             var modifyColumn = new DataGridViewButtonColumn()
@@ -186,7 +186,9 @@ namespace Insurance_Project
             DialogResult result = modifyForm.ShowDialog();
             if (result == DialogResult.OK)
             {
-                DisplayProducts(); 
+                DisplayProducts();
+                dgvProducts.Refresh(); 
+                dgvProducts.Invalidate();
             }
         }
 
