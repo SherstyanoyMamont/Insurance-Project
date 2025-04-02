@@ -15,7 +15,7 @@ namespace Insurance_Project
     {
 
         private InsuranceCatalog Сatalog;
-        
+        private NotificationService notification;
 
         public List<Insurance> Insurances = new List<Insurance>();
         private Insurance selectedInsurance;
@@ -29,8 +29,11 @@ namespace Insurance_Project
             Сatalog = catalog;
             Insurances = Сatalog.ListInsurance;
             //PopulateListBox();
-            
+
             //PopulatedataGridViewSearch();
+
+            notification = new NotificationService(Insurances);
+            CheckAndDisplayNotifications();
         }
 
         public SearchForm()
@@ -124,7 +127,13 @@ namespace Insurance_Project
 
             dgvProducts.Columns[9].Visible = false;
 
-            
+            dgvProducts.Columns[10].Visible = false;
+
+            dgvProducts.Columns[11].Visible = true;
+
+            dgvProducts.Columns[12].Visible = false;
+
+
 
 
 
@@ -133,8 +142,8 @@ namespace Insurance_Project
 
         private void dgvProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            const int ModifyIndex = 10;
-            const int DeleteIndex = 11;
+            const int ModifyIndex = 13;
+            const int DeleteIndex = 14;
 
             if (e.RowIndex < 0 || e.RowIndex >= dgvProducts.Rows.Count)
                 return;
@@ -164,37 +173,20 @@ namespace Insurance_Project
 
         }
 
-        private void ModifyProduct(int indexOfOld)
+        private void ModifyProduct(int rowIndex)
         {
-            var oldInsurance = new Insurance(selectedInsurance.Client, selectedInsurance.Coverage, selectedInsurance.penaltyPoints)
-            {
-                InsuranceCode = selectedInsurance.InsuranceCode,
-                ClientName = selectedInsurance.ClientName,
-                ClientPhone = selectedInsurance.ClientPhone
+            var selectedInsurance = Insurances[rowIndex]; 
 
+            var modifyForm = new frmAddModifyProduct()
+            {
+                Insurance = selectedInsurance,  
+                AddInsurance = false
             };
 
-            var addModifyProductForm = new frmAddModifyProduct()
-            {
-                AddInsurance = false,
-                Insurance = selectedInsurance
-            };
-            DialogResult result = addModifyProductForm.ShowDialog();
+            DialogResult result = modifyForm.ShowDialog();
             if (result == DialogResult.OK)
             {
-                try
-                {
-
-                    this.Insurances[indexOfOld] = selectedInsurance;
-                    DisplayProducts();
-
-
-                }
-
-                catch (Exception ex)
-                {
-                    HandleGeneralError(ex);
-                }
+                DisplayProducts(); 
             }
         }
 
@@ -317,8 +309,17 @@ namespace Insurance_Project
                     HandleGeneralError(ex);
                 }
             }
-        }
 
+         
+        }
+        private void CheckAndDisplayNotifications()
+        {
+            var notifications = notification.CheckNotifications();
+            foreach (var notification in notifications)
+            {
+                MessageBox.Show(notification);  // Or update a list/text box in the UI
+            }
+        }
 
         /// </New Table>
         /// ///////////////////////////////////////////////////////////////////////////

@@ -15,6 +15,12 @@ namespace Insurance_Project
 
         public double BasePrice { get; private set; }
         public int Under24ageCoeficient { get; private set; }
+
+        //for Notifications
+        public DateTime PolicyExpiryDate { get; set; }
+        public DateTime LastContactDate { get; set; }
+        public bool Notif { get; set; }
+
         public Client Client { get; private set; }
 
         public Insurance(Client client, string? coverage, int penaltyPoints)
@@ -157,6 +163,9 @@ namespace Insurance_Project
 
             return points;
         }
+
+
+        
     }
 }
 
