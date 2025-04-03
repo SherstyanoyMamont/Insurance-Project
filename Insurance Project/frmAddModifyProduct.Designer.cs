@@ -43,7 +43,7 @@
             txtPrice.Location = new Point(178, 177);
             txtPrice.Margin = new Padding(6, 7, 6, 7);
             txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(90, 31);
+            txtPrice.Size = new Size(324, 31);
             txtPrice.TabIndex = 35;
             txtPrice.Tag = "Price";
             // 
@@ -62,7 +62,7 @@
             txtCode.Margin = new Padding(6, 7, 6, 7);
             txtCode.MaxLength = 4;
             txtCode.Name = "txtCode";
-            txtCode.Size = new Size(90, 31);
+            txtCode.Size = new Size(324, 31);
             txtCode.TabIndex = 33;
             txtCode.Tag = "Code";
             // 
