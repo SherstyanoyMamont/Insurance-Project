@@ -85,6 +85,11 @@ namespace Insurance_Project
         {
 
         }
+
+        private void Report_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public enum CompositingMode

@@ -8,6 +8,7 @@ using System.Text;
 using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Insurance_Project
 {
@@ -74,7 +75,7 @@ namespace Insurance_Project
 
             // format the column header
             dgvProducts.EnableHeadersVisualStyles = false;
-            dgvProducts.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold);
+            //dgvProducts.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold);
             dgvProducts.ColumnHeadersDefaultCellStyle.BackColor = Color.Goldenrod;
             dgvProducts.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
@@ -92,14 +93,14 @@ namespace Insurance_Project
             // format the third column
             dgvProducts.Columns[2].HeaderText = "Phone Number";
             dgvProducts.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvProducts.Columns[2].Width = 150;
+            dgvProducts.Columns[2].Width = 160;
             dgvProducts.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             //dgvProducts.Columns[2].Visible = false;
 
             // format the forth column
             dgvProducts.Columns[3].HeaderText = "Coverage";
             dgvProducts.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvProducts.Columns[3].Width = 90;
+            dgvProducts.Columns[3].Width = 100;
             dgvProducts.Columns[3].DefaultCellStyle.Format = "c";
             dgvProducts.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
@@ -114,7 +115,7 @@ namespace Insurance_Project
             // format the forth column
             dgvProducts.Columns[5].HeaderText = "Car";
             dgvProducts.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvProducts.Columns[5].Width = 220;
+            dgvProducts.Columns[5].Width = 280;
             dgvProducts.Columns[5].DefaultCellStyle.Format = "c";
             dgvProducts.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             //dgvProducts.Columns[5].Visible = false;
@@ -268,25 +269,43 @@ namespace Insurance_Project
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            bool found = false;
-            foreach (var o in Сatalog.ListInsurance)
+            string searchName = textBox1.Text.Trim();
+
+            if (string.IsNullOrEmpty(searchName))
             {
-                if (o.Client.FirstName == Convert.ToString(textBox1.Text))
+                MessageBox.Show("Enter a first name to search.");
+                return;
+            }
+
+            bool found = false;
+
+            foreach (var insurance in Сatalog.ListInsurance)
+            {
+                if (insurance.Client.FirstName.Equals(searchName, StringComparison.OrdinalIgnoreCase))
                 {
-                    MessageBox.Show("Full name: " + o.Client.Gender + " " + o.Client.FirstName +
-                        "\nMake auto: " + o.Client.Cars[0].Brand +
-                        "\nPrise: " + o.FinalPrice + " €" +
-                        "\nDate: " + o.Client.DateTimeNow);
                     found = true;
+
+                    // If the client has several cars, we show the first one or the entire list
+                    string carsInfo = "";
+                    foreach (var car in insurance.Client.Cars)
+                    {
+                        carsInfo += $"\n - {car.Brand} {car.Model} ({car.Colour})";
+                    }
+
+                    MessageBox.Show(
+                        $"Full name: {insurance.Client.Gender} {insurance.Client.FirstName} {insurance.Client.LastName}" +
+                        $"\nCars:{carsInfo}" +
+                        $"\nPrice: {insurance.FinalPrice} €" +
+                        $"\nDate: {insurance.Client.DateTimeNow}"
+                    );
+
                     break;
                 }
-
             }
+
             if (!found)
             {
-
-                MessageBox.Show("Record not Found");
-
+                MessageBox.Show("Record not found.");
             }
         }
 

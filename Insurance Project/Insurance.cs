@@ -8,7 +8,7 @@ namespace Insurance_Project
         public string ClientName { get; set; }
         public string? ClientPhone { get; set; }
         public string? Coverage { get; private set; }
-        public double FinalPrice { get; private set; }
+        public double FinalPrice { get; set; }
         public string? CarBrand { get; private set; }
 
         public int penaltyPoints { get; set; }
@@ -25,7 +25,7 @@ namespace Insurance_Project
 
         public Insurance(Client client, string? coverage, int penaltyPoints)
         {
-            this.InsuranceCode = "1";
+            this.InsuranceCode = "";
             this.BasePrice = 1000;
             this.Under24ageCoeficient = 30; //30%
             this.Client = client;
@@ -36,6 +36,20 @@ namespace Insurance_Project
             this.CarBrand = client.Cars[0].Brand + " " + client.Cars[0].Model;
             this.penaltyPoints = penaltyPoints;
         }
+
+        //public Insurance()
+        //{
+        //    Client client = new Client();
+        //    this.InsuranceCode = "1";
+        //    this.BasePrice = 1000;
+        //    this.Under24ageCoeficient = 30; //30%
+        //    this.Client = client;
+        //    this.Coverage = "Fully Comprehensive";
+        //    this.FinalPrice = CalculateInsuranceCost(client);
+        //    this.ClientName = client.FirstName + " " + client.LastName;
+        //    this.ClientPhone = client.PhoneNumber;
+        //    this.CarBrand = client.Cars[0].Brand + " " + client.Cars[0].Model;
+        //}
 
 
 
