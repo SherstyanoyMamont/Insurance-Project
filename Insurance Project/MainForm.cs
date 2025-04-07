@@ -12,6 +12,9 @@ namespace Insurance_Project
         public InsuranceCatalog catalog = new InsuranceCatalog();
         private System.Windows.Forms.Timer notificationTimer;
         private NotificationService notificationService;
+
+        private Dictionary<string, Dictionary<string, double>> carModelData;
+
         public MainForm(User user)
         {
             InitializeComponent();
@@ -20,24 +23,25 @@ namespace Insurance_Project
             JSONSaveLoad jsonHandler = new JSONSaveLoad();
             catalog.ListInsurance = jsonHandler.LoadListFromFile();
 
-
+            
             notificationService = new NotificationService(catalog.ListInsurance);
-
             notificationTimer = new System.Windows.Forms.Timer();  
             notificationTimer.Interval = 86400000; 
             notificationTimer.Tick += NotificationTimer_Tick;
             notificationTimer.Start();
+            
         }
 
         private void NotificationTimer_Tick(object sender, EventArgs e)
         {
-           
+
             var notifications = notificationService.CheckNotifications();
             foreach (var notification in notifications)
             {
                 MessageBox.Show(notification);  // MessageBox is a thread-safe component for displaying alerts
             }
         }
+
         private void buttonAddClient_Click(object sender, EventArgs e)
         {
 
@@ -79,7 +83,68 @@ namespace Insurance_Project
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
+            // When loading the form, we load brands/models
+            LoadCarBrandsAndModels();
+        }
+
+        /// <summary>
+        /// Load Data from JSON and filling the comboBoxCarBrand.
+        /// </summary>
+        private void LoadCarBrandsAndModels()
+        {
+            try
+            {
+                // Load the list of brands
+                string brandJson = File.ReadAllText("CarBrandFactors.json");
+                var brandFactors = JsonConvert.DeserializeObject<Dictionary<string, double>>(brandJson);
+
+                // Loading list of models
+                string modelJson = File.ReadAllText("CarModelFactors.json");
+                carModelData = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, double>>>(modelJson);
+
+                comboBoxCarBrand.Items.Clear();
+                if (brandFactors != null)
+                {
+                    foreach (var brand in brandFactors.Keys)
+                    {
+                        comboBoxCarBrand.Items.Add(brand);
+                    }
+                }
+
+                // Handler to choose the brand, so that the models change
+                comboBoxCarBrand.SelectedIndexChanged += comboBoxCarBrand_SelectedIndexChanged;
+
+                // Сhoose the first brand when starting out
+                if (comboBoxCarBrand.Items.Count > 0)
+                    comboBoxCarBrand.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка при загрузке данных авто: " + ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// When the user changes the brand, we load the corresponding models into comboBoxCarModel
+        /// </summary>
+        private void comboBoxCarBrand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxCarModel.Items.Clear();
+
+            if (comboBoxCarBrand.SelectedItem == null)
+                return;
+
+            string selectedBrand = comboBoxCarBrand.SelectedItem.ToString();
+
+            // If there is such a brand name in carModelData, we take the list of models
+            if (carModelData != null && carModelData.ContainsKey(selectedBrand))
+            {
+                var models = carModelData[selectedBrand];
+                foreach (var modelName in models.Keys)
+                {
+                    comboBoxCarModel.Items.Add(modelName);
+                }
+            }
         }
     }
 }

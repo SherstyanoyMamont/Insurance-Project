@@ -77,7 +77,7 @@ namespace Insurance_Project
             }
             else
             {
-                locationFactor = 0; // default
+                locationFactor = 0;
             }
 
 
@@ -89,7 +89,7 @@ namespace Insurance_Project
             }
             else
             {
-                brandFactor = 80; // default
+                brandFactor = 80;
             }
 
             var modelFactorsJson = File.ReadAllText("CarModelFactors.json");

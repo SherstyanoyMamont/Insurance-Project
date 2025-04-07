@@ -95,7 +95,7 @@
             labelFirstName.Location = new Point(94, 172);
             labelFirstName.Margin = new Padding(2, 0, 2, 0);
             labelFirstName.Name = "labelFirstName";
-            labelFirstName.Size = new Size(92, 23);
+            labelFirstName.Size = new Size(106, 28);
             labelFirstName.TabIndex = 1;
             labelFirstName.Text = "First Name";
             // 
@@ -106,7 +106,7 @@
             labelSurname.Location = new Point(94, 234);
             labelSurname.Margin = new Padding(2, 0, 2, 0);
             labelSurname.Name = "labelSurname";
-            labelSurname.Size = new Size(78, 23);
+            labelSurname.Size = new Size(89, 28);
             labelSurname.TabIndex = 2;
             labelSurname.Text = "Surname";
             // 
@@ -117,7 +117,7 @@
             labelDoB.Location = new Point(93, 303);
             labelDoB.Margin = new Padding(2, 0, 2, 0);
             labelDoB.Name = "labelDoB";
-            labelDoB.Size = new Size(107, 23);
+            labelDoB.Size = new Size(122, 28);
             labelDoB.TabIndex = 3;
             labelDoB.Text = "Date of Birth";
             // 
@@ -128,7 +128,7 @@
             checkBoxDiscount.Location = new Point(263, 782);
             checkBoxDiscount.Margin = new Padding(2);
             checkBoxDiscount.Name = "checkBoxDiscount";
-            checkBoxDiscount.Size = new Size(69, 27);
+            checkBoxDiscount.Size = new Size(81, 32);
             checkBoxDiscount.TabIndex = 4;
             checkBoxDiscount.Text = " 10%";
             checkBoxDiscount.UseVisualStyleBackColor = true;
@@ -139,7 +139,7 @@
             textBoxFirstName.Location = new Point(263, 170);
             textBoxFirstName.Margin = new Padding(2);
             textBoxFirstName.Name = "textBoxFirstName";
-            textBoxFirstName.Size = new Size(322, 30);
+            textBoxFirstName.Size = new Size(322, 34);
             textBoxFirstName.TabIndex = 5;
             textBoxFirstName.Text = "Ivan";
             // 
@@ -149,7 +149,7 @@
             textBoxSurname.Location = new Point(263, 232);
             textBoxSurname.Margin = new Padding(2);
             textBoxSurname.Name = "textBoxSurname";
-            textBoxSurname.Size = new Size(322, 30);
+            textBoxSurname.Size = new Size(322, 34);
             textBoxSurname.TabIndex = 6;
             textBoxSurname.Text = "Korotkov";
             // 
@@ -160,7 +160,7 @@
             comboBoxCarBrand.Location = new Point(850, 170);
             comboBoxCarBrand.Margin = new Padding(2);
             comboBoxCarBrand.Name = "comboBoxCarBrand";
-            comboBoxCarBrand.Size = new Size(300, 31);
+            comboBoxCarBrand.Size = new Size(300, 36);
             comboBoxCarBrand.TabIndex = 7;
             comboBoxCarBrand.Text = "BMW";
             // 
@@ -171,7 +171,7 @@
             label1.Location = new Point(720, 172);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(86, 23);
+            label1.Size = new Size(97, 28);
             label1.TabIndex = 8;
             label1.Text = "Car Brand";
             // 
@@ -182,7 +182,7 @@
             dateTimePickerDoB.Location = new Point(263, 297);
             dateTimePickerDoB.Margin = new Padding(2);
             dateTimePickerDoB.Name = "dateTimePickerDoB";
-            dateTimePickerDoB.Size = new Size(322, 30);
+            dateTimePickerDoB.Size = new Size(322, 34);
             dateTimePickerDoB.TabIndex = 10;
             // 
             // labelCarModel
@@ -192,7 +192,7 @@
             labelCarModel.Location = new Point(720, 236);
             labelCarModel.Margin = new Padding(2, 0, 2, 0);
             labelCarModel.Name = "labelCarModel";
-            labelCarModel.Size = new Size(89, 23);
+            labelCarModel.Size = new Size(103, 28);
             labelCarModel.TabIndex = 11;
             labelCarModel.Text = "Car Model";
             // 
@@ -203,7 +203,7 @@
             comboBoxCarModel.Location = new Point(850, 232);
             comboBoxCarModel.Margin = new Padding(2);
             comboBoxCarModel.Name = "comboBoxCarModel";
-            comboBoxCarModel.Size = new Size(300, 31);
+            comboBoxCarModel.Size = new Size(300, 36);
             comboBoxCarModel.TabIndex = 12;
             comboBoxCarModel.Text = "M5 Competition Saloon";
             // 
@@ -214,7 +214,7 @@
             labelDiscount.Location = new Point(94, 786);
             labelDiscount.Margin = new Padding(2, 0, 2, 0);
             labelDiscount.Name = "labelDiscount";
-            labelDiscount.Size = new Size(77, 23);
+            labelDiscount.Size = new Size(89, 28);
             labelDiscount.TabIndex = 13;
             labelDiscount.Text = "Discount";
             // 
@@ -226,7 +226,7 @@
             label2.Location = new Point(456, 52);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(325, 46);
+            label2.Size = new Size(380, 54);
             label2.TabIndex = 14;
             label2.Text = "Insurance Company";
             // 
@@ -237,7 +237,7 @@
             label3.Location = new Point(720, 296);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(61, 23);
+            label3.Size = new Size(71, 28);
             label3.TabIndex = 15;
             label3.Text = "Colour";
             // 
@@ -248,7 +248,7 @@
             label4.Location = new Point(720, 366);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(42, 23);
+            label4.Size = new Size(48, 28);
             label4.TabIndex = 16;
             label4.Text = "Year";
             // 
@@ -258,7 +258,7 @@
             textBoxColour.Location = new Point(850, 296);
             textBoxColour.Margin = new Padding(2);
             textBoxColour.Name = "textBoxColour";
-            textBoxColour.Size = new Size(300, 30);
+            textBoxColour.Size = new Size(300, 34);
             textBoxColour.TabIndex = 17;
             textBoxColour.Text = "Nardo Grey";
             // 
@@ -269,7 +269,7 @@
             numericUpDownCarYear.Maximum = new decimal(new int[] { 2025, 0, 0, 0 });
             numericUpDownCarYear.Minimum = new decimal(new int[] { 1990, 0, 0, 0 });
             numericUpDownCarYear.Name = "numericUpDownCarYear";
-            numericUpDownCarYear.Size = new Size(300, 30);
+            numericUpDownCarYear.Size = new Size(300, 34);
             numericUpDownCarYear.TabIndex = 2020;
             numericUpDownCarYear.Value = new decimal(new int[] { 2020, 0, 0, 0 });
             // 
@@ -280,7 +280,7 @@
             label5.Location = new Point(720, 434);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(97, 23);
+            label5.Size = new Size(111, 28);
             label5.TabIndex = 2021;
             label5.Text = "Engine Size";
             // 
@@ -291,7 +291,7 @@
             numericUpDownEngineSize.Margin = new Padding(2);
             numericUpDownEngineSize.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
             numericUpDownEngineSize.Name = "numericUpDownEngineSize";
-            numericUpDownEngineSize.Size = new Size(300, 30);
+            numericUpDownEngineSize.Size = new Size(300, 34);
             numericUpDownEngineSize.TabIndex = 2022;
             numericUpDownEngineSize.Value = new decimal(new int[] { 15, 0, 0, 65536 });
             // 
@@ -302,7 +302,7 @@
             label6.Location = new Point(94, 639);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(115, 23);
+            label6.Size = new Size(132, 28);
             label6.TabIndex = 2023;
             label6.Text = "Driver License";
             // 
@@ -313,7 +313,7 @@
             label7.Location = new Point(94, 709);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(116, 23);
+            label7.Size = new Size(133, 28);
             label7.TabIndex = 2024;
             label7.Text = "Penalty Points";
             // 
@@ -322,7 +322,7 @@
             numericUpDownPenaltyPoints.Location = new Point(263, 709);
             numericUpDownPenaltyPoints.Margin = new Padding(2);
             numericUpDownPenaltyPoints.Name = "numericUpDownPenaltyPoints";
-            numericUpDownPenaltyPoints.Size = new Size(322, 30);
+            numericUpDownPenaltyPoints.Size = new Size(322, 34);
             numericUpDownPenaltyPoints.TabIndex = 2025;
             // 
             // numericUpDownDriverLicense
@@ -330,7 +330,7 @@
             numericUpDownDriverLicense.Location = new Point(263, 637);
             numericUpDownDriverLicense.Margin = new Padding(2);
             numericUpDownDriverLicense.Name = "numericUpDownDriverLicense";
-            numericUpDownDriverLicense.Size = new Size(322, 30);
+            numericUpDownDriverLicense.Size = new Size(322, 34);
             numericUpDownDriverLicense.TabIndex = 2026;
             numericUpDownDriverLicense.Value = new decimal(new int[] { 5, 0, 0, 0 });
             // 
@@ -341,7 +341,7 @@
             label8.Location = new Point(94, 367);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Size = new Size(66, 23);
+            label8.Size = new Size(76, 28);
             label8.TabIndex = 2027;
             label8.Text = "Gender";
             // 
@@ -353,7 +353,7 @@
             comboBoxGender.Location = new Point(263, 367);
             comboBoxGender.Margin = new Padding(4);
             comboBoxGender.Name = "comboBoxGender";
-            comboBoxGender.Size = new Size(322, 31);
+            comboBoxGender.Size = new Size(322, 36);
             comboBoxGender.TabIndex = 2028;
             comboBoxGender.Text = "Male";
             // 
@@ -364,7 +364,7 @@
             label9.Location = new Point(94, 436);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(124, 23);
+            label9.Size = new Size(140, 28);
             label9.TabIndex = 2029;
             label9.Text = "Phone number";
             // 
@@ -375,7 +375,7 @@
             label10.Location = new Point(94, 569);
             label10.Margin = new Padding(4, 0, 4, 0);
             label10.Name = "label10";
-            label10.Size = new Size(51, 23);
+            label10.Size = new Size(59, 28);
             label10.TabIndex = 2030;
             label10.Text = "Email";
             // 
@@ -385,7 +385,7 @@
             textBoxEmail.Location = new Point(263, 569);
             textBoxEmail.Margin = new Padding(4);
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(322, 30);
+            textBoxEmail.Size = new Size(322, 34);
             textBoxEmail.TabIndex = 2031;
             textBoxEmail.Text = "K00299347@tus.ie";
             // 
@@ -393,10 +393,11 @@
             // 
             comboBoxLocation.FlatStyle = FlatStyle.Flat;
             comboBoxLocation.FormattingEnabled = true;
+            comboBoxLocation.Items.AddRange(new object[] { "Carlow", "Cavan", "Clare", "Cork", "Donegal", "Dublin", "Galway", "Kerry", "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford", "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon", "Sligo", "Tipperary", "Waterford", "Westmeath", "Wexford", "Wicklow" });
             comboBoxLocation.Location = new Point(263, 500);
             comboBoxLocation.Margin = new Padding(4);
             comboBoxLocation.Name = "comboBoxLocation";
-            comboBoxLocation.Size = new Size(322, 31);
+            comboBoxLocation.Size = new Size(322, 36);
             comboBoxLocation.TabIndex = 2034;
             comboBoxLocation.Text = "Limerick";
             // 
@@ -407,7 +408,7 @@
             label11.Location = new Point(94, 500);
             label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
-            label11.Size = new Size(75, 23);
+            label11.Size = new Size(87, 28);
             label11.TabIndex = 2033;
             label11.Text = "Location";
             // 
@@ -418,7 +419,7 @@
             label12.Location = new Point(720, 504);
             label12.Margin = new Padding(4, 0, 4, 0);
             label12.Name = "label12";
-            label12.Size = new Size(76, 23);
+            label12.Size = new Size(88, 28);
             label12.TabIndex = 2035;
             label12.Text = "Emission";
             // 
@@ -429,7 +430,7 @@
             label13.Location = new Point(720, 573);
             label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
-            label13.Size = new Size(82, 23);
+            label13.Size = new Size(95, 28);
             label13.TabIndex = 2036;
             label13.Text = "Coverage";
             // 
@@ -441,7 +442,7 @@
             comboBoxEmission.Location = new Point(850, 500);
             comboBoxEmission.Margin = new Padding(4);
             comboBoxEmission.Name = "comboBoxEmission";
-            comboBoxEmission.Size = new Size(300, 31);
+            comboBoxEmission.Size = new Size(300, 36);
             comboBoxEmission.TabIndex = 2037;
             comboBoxEmission.Text = "High";
             // 
@@ -453,7 +454,7 @@
             comboBoxCoverage.Location = new Point(850, 569);
             comboBoxCoverage.Margin = new Padding(4);
             comboBoxCoverage.Name = "comboBoxCoverage";
-            comboBoxCoverage.Size = new Size(299, 31);
+            comboBoxCoverage.Size = new Size(299, 36);
             comboBoxCoverage.TabIndex = 2038;
             comboBoxCoverage.Text = "Fully Comprehensive";
             // 
@@ -464,7 +465,7 @@
             dateTimePickerDate.Location = new Point(906, 765);
             dateTimePickerDate.Margin = new Padding(4);
             dateTimePickerDate.Name = "dateTimePickerDate";
-            dateTimePickerDate.Size = new Size(312, 30);
+            dateTimePickerDate.Size = new Size(312, 34);
             dateTimePickerDate.TabIndex = 2039;
             // 
             // Date
@@ -474,7 +475,7 @@
             Date.Location = new Point(819, 771);
             Date.Margin = new Padding(4, 0, 4, 0);
             Date.Name = "Date";
-            Date.Size = new Size(46, 23);
+            Date.Size = new Size(53, 28);
             Date.TabIndex = 2040;
             Date.Text = "Date";
             // 
@@ -500,12 +501,12 @@
             maskedTextBoxPhoneNumber.Margin = new Padding(4);
             maskedTextBoxPhoneNumber.Mask = "(999) 000-0000";
             maskedTextBoxPhoneNumber.Name = "maskedTextBoxPhoneNumber";
-            maskedTextBoxPhoneNumber.Size = new Size(322, 30);
+            maskedTextBoxPhoneNumber.Size = new Size(322, 34);
             maskedTextBoxPhoneNumber.TabIndex = 2042;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(9F, 23F);
+            AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(240, 240, 245);
             ClientSize = new Size(1261, 915);

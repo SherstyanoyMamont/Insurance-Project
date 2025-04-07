@@ -38,7 +38,7 @@ namespace Insurance_Project
 
         private void DisplayProduct()
         {
-            txtCode.Text = Insurance.InsuranceCode;
+            //txtCode.Text = Insurance.InsuranceCode;
             txtPhoneNumber.Text = Insurance.ClientPhone;
             txtPrice.Text = Insurance.FinalPrice.ToString("N2");
         }
@@ -77,9 +77,9 @@ namespace Insurance_Project
 
         private void LoadProductData()
         {
-            Insurance.InsuranceCode = txtCode.Text;
-            Insurance.ClientPhone = txtPhoneNumber.Text;
-            Insurance.FinalPrice = Convert.ToDouble(txtPrice.Text);
+            //Insurance.InsuranceCode = txtCode.Text;
+            //Insurance.ClientPhone = txtPhoneNumber.Text;
+            //Insurance.FinalPrice = Convert.ToDouble(txtPrice.Text);
 
         }
     }

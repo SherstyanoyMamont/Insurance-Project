@@ -105,10 +105,10 @@ namespace Insurance_Project
             dgvProducts.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
             // format the forth column
-            dgvProducts.Columns[4].HeaderText = "Final Price";
+            dgvProducts.Columns[4].HeaderText = "Final Price €";
             dgvProducts.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
             dgvProducts.Columns[4].Width = 130;
-            dgvProducts.Columns[4].DefaultCellStyle.Format = "c";
+            //dgvProducts.Columns[4].DefaultCellStyle.Format = "c";
             dgvProducts.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             //dgvProducts.Columns[4].Visible = false;
 
@@ -120,7 +120,7 @@ namespace Insurance_Project
             dgvProducts.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             //dgvProducts.Columns[5].Visible = false;
 
-            dgvProducts.Columns[6].Visible = false;
+            dgvProducts.Columns[6].Visible = true;
 
             dgvProducts.Columns[7].Visible = false;
 
@@ -338,7 +338,7 @@ namespace Insurance_Project
             var notifications = notification.CheckNotifications();
             foreach (var notification in notifications)
             {
-                MessageBox.Show(notification);  // Or update a list/text box in the UI
+                //MessageBox.Show(notification);  // Or update a list/text box in the UI
             }
         }
 
