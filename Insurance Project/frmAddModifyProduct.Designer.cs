@@ -33,14 +33,15 @@
             txtCode = new TextBox();
             btnCancel = new Button();
             btnAccept = new Button();
-            label3 = new Label();
             label2 = new Label();
             label1 = new Label();
+            txtInsuranceCode = new TextBox();
+            label3 = new Label();
             SuspendLayout();
             // 
             // txtPrice
             // 
-            txtPrice.Location = new Point(178, 177);
+            txtPrice.Location = new Point(178, 145);
             txtPrice.Margin = new Padding(6, 7, 6, 7);
             txtPrice.Name = "txtPrice";
             txtPrice.Size = new Size(324, 31);
@@ -49,16 +50,16 @@
             // 
             // txtPhoneNumber
             // 
-            txtPhoneNumber.Location = new Point(178, 105);
+            txtPhoneNumber.Location = new Point(178, 88);
             txtPhoneNumber.Margin = new Padding(6, 7, 6, 7);
             txtPhoneNumber.Name = "txtPhoneNumber";
-            txtPhoneNumber.Size = new Size(324, 31);
+            txtPhoneNumber.Size = new Size(248, 23);
             txtPhoneNumber.TabIndex = 34;
             txtPhoneNumber.Tag = "Description";
             // 
             // txtCode
             // 
-            txtCode.Location = new Point(178, 44);
+            txtCode.Location = new Point(178, 24);
             txtCode.Margin = new Padding(6, 7, 6, 7);
             txtCode.MaxLength = 4;
             txtCode.Name = "txtCode";
@@ -69,58 +70,67 @@
             // btnCancel
             // 
             btnCancel.DialogResult = DialogResult.Cancel;
-            btnCancel.Location = new Point(336, 305);
-            btnCancel.Margin = new Padding(6, 7, 6, 7);
+            btnCancel.Location = new Point(380, 247);
+            btnCancel.Margin = new Padding(4);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(146, 43);
+            btnCancel.Size = new Size(102, 26);
             btnCancel.TabIndex = 37;
             btnCancel.Text = "&Cancel";
             // 
             // btnAccept
             // 
-            btnAccept.Location = new Point(176, 305);
-            btnAccept.Margin = new Padding(6, 7, 6, 7);
+            btnAccept.Location = new Point(268, 247);
+            btnAccept.Margin = new Padding(4);
             btnAccept.Name = "btnAccept";
-            btnAccept.Size = new Size(146, 43);
+            btnAccept.Size = new Size(102, 26);
             btnAccept.TabIndex = 36;
             btnAccept.Text = "&Accept";
             btnAccept.Click += btnAccept_Click;
             // 
-            // label3
-            // 
-            label3.Location = new Point(53, 172);
-            label3.Margin = new Padding(6, 0, 6, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(111, 43);
-            label3.TabIndex = 40;
-            label3.Text = "Price:";
-            label3.TextAlign = ContentAlignment.MiddleRight;
-            // 
             // label2
             // 
-            label2.Location = new Point(15, 99);
+            label2.Location = new Point(-3, 66);
             label2.Margin = new Padding(6, 0, 6, 0);
             label2.Name = "label2";
-            label2.Size = new Size(149, 43);
+            label2.Size = new Size(149, 65);
             label2.TabIndex = 39;
             label2.Text = "Phone Number:";
             label2.TextAlign = ContentAlignment.MiddleRight;
             // 
             // label1
             // 
-            label1.Location = new Point(53, 35);
-            label1.Margin = new Padding(6, 0, 6, 0);
+            label1.Location = new Point(13, 21);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(111, 43);
+            label1.Size = new Size(78, 26);
             label1.TabIndex = 38;
             label1.Text = "Code:";
             label1.TextAlign = ContentAlignment.MiddleRight;
             // 
+            // txtInsuranceCode
+            // 
+            txtInsuranceCode.Location = new Point(123, 24);
+            txtInsuranceCode.Margin = new Padding(4);
+            txtInsuranceCode.Name = "txtInsuranceCode";
+            txtInsuranceCode.Size = new Size(125, 23);
+            txtInsuranceCode.TabIndex = 43;
+            txtInsuranceCode.Tag = "Description";
+            // 
+            // label3
+            // 
+            label3.Location = new Point(24, 142);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(78, 26);
+            label3.TabIndex = 40;
+            label3.Text = "Phone:";
+            label3.TextAlign = ContentAlignment.MiddleRight;
+            // 
             // frmAddModifyProduct
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(620, 412);
+            ClientSize = new Size(551, 336);
             Controls.Add(txtPrice);
             Controls.Add(txtPhoneNumber);
             Controls.Add(txtCode);
@@ -129,8 +139,9 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(2);
             Name = "frmAddModifyProduct";
-            Text = "frmAddModifyProduct";
+            Text = " ";
             Load += frmAddModifyProduct_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -142,8 +153,11 @@
         private TextBox txtCode;
         private Button btnCancel;
         private Button btnAccept;
-        private Label label3;
         private Label label2;
         private Label label1;
+        private TextBox txtInsuranceCode;
+        private TextBox txtClientName;
+        private TextBox txtClientPhone;
+        private Label label3;
     }
 }
